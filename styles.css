@@ -1,0 +1,37 @@
+html {
+  color: #423c49;
+  font-weight: 200;
+  background: #423c49;
+}
+body {
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  margin: 0 auto 5rem auto;
+  width: 80%;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  padding: 3rem 0;
+  color: #FEFEDF;
+}
+
+
+table, th, td {
+  padding: 1rem;
+  border: 1px solid #423c49;
+  border-collapse: collapse;
+}
+tbody {
+  background: #FEFEDF;
+}
+
+thead {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background: #FFC75F !important;
+  
+}

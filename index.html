@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheatsheet</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="header__title">CSS Cheatsheet</h1>
+  </header>
+
+  <main>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Example</th>
+          <th>Explanation</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>@font-face</td>
+          <td>Defines custome fonts for web usage</td>
+          <td><code>@font-face {<br>
+            font-family: 'MyCustomFont';<br>
+            src: url('fonts/MyCustomFont-Regular.woff2') format('woff2'),<br>
+                 url('fonts/MyCustomFont-Regular.woff') format('woff');<br>}</code>
+          </td>
+          <td>@font-face Block: Defines a custom font named MyCustomFont.<br>font-family: The name you will use to reference the font in your CSS.<br>src: The source of the font file(s). Here, it's specified in both woff2 and woff formats for better browser compatibility.<br></td>
+        </tr>
+
+        <tr>
+          <td>border-collapse</td>
+          <td>Creates a single border in tables</td>
+          <td>table {<br>
+            border-collapse: collapse;<br>
+          }</td>
+          <td>It applies to tables. Values are 'collapse' or 'separate' (default).</td>
+        </tr>
+
+        <tr>
+          <td>background</td>
+          <td>Shorthand for setting myltiple background-related properties for an element.</td>
+          <td>background: url(image.png) center/cover no-repeat green</td>
+          <td>Syntax:<br>
+            background: [background-color] [background-image] [background-position] / [background-size] [background-repeat] [background-origin] [background-clip] [background-attachment];<br><br>Notice that bg-position & bg-size are set together with '/'<br><br>
+            Note: the browser is able to recognise different syntax order
+          </td>
+        </tr>
+
+        <tr>
+          <td>::before</td>
+          <td>Inserts content 'before' the content of an element. It is tipically used to add cosmetic content to an element.</td>
+          <td><code>.image-container {<br>
+            background: url(image.omg)<br>
+            position: relative;<br>
+          }<br>
+            .image-container::before {<br>
+            content: '';<br>
+            position: absolute;<br>
+            top: 0;<br>
+            left: 0;<br>
+            width: 100%;<br>
+            height: 100%;<br>
+            background-color: rgba(0, 0, 0, 0.5); <br>
+          }</code></td>
+          <td>.image-container: Positioned relative to establish a containing block for absolutely positioned elements.<br>.image-container::before: Creates a pseudo-element (::before) that spans the entire dimensions of .image-container.<br>content: '': Required for the pseudo-element to generate content.<br>position: absolute;: Positions the pseudo-element absolutely relative to .image-container.<br>top: 0; left: 0; width: 100%; height: 100%;: Covers the entire area of .image-container.<br>background-color: rgba(0, 0, 0, 0.5);: Sets a semi-transparent black overlay using RGBA values (rgba(red, green, blue, alpha)), where alpha controls opacity (0.5 means 50% opaque).</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </main>
+  
+</body>
+</html>
